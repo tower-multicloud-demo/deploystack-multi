@@ -6,10 +6,18 @@
       access_key: '{{ lookup("env", "AWS_ACCESS_KEY_ID") }}'
       secret_key: '{{ lookup("env", "AWS_SECRET_ACCESS_KEY") }}'
       security_token: '{{ lookup("env", "AWS_SECURITY_TOKEN") }}'
+    azure:
+      client_id: '{{ lookup("env", "AZURE_CLIENT_ID") }}'
+      secret: '{{ lookup("env", "AZURE_SECRET") }}'
+      tenant: '{{ lookup("env", "AZURE_TENANT") }}'
+      subscription_id: '{{ lookup("env", "AZURE_SUBSCRIPTION_ID") }}'
       
   tasks:
     - debug:
         var: aws
+    
+     - debug:
+        var: azure
       
 - import_playbook: infrastructure.yml
 - import_playbook: application.yml
