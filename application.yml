@@ -1,0 +1,12 @@
+---
+- name: Install the application
+  hosts: "webservers"
+  gather_facts: no
+  become: yes
+  remote_user: ec2-user
+  tasks:
+    - name: Install Apache from its role on {{ scope }} instances
+      include_role:
+        name: role-app
+        
+        

@@ -1,0 +1,9 @@
+---
+- name: Delete all ec2 instances of a given scope
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: ec2 delete
+      include_role: 
+        name: ec2
+        tasks_from: ec2_delete
