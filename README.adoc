@@ -1,4 +1,6 @@
 ---
+
+----
 scope: stackdemo
 ec2_count: "1"
 ec2_region: "eu-central-1"
@@ -12,3 +14,5 @@ ec2_wait: true
 ec2_instance_tags:
   Name: "{{ scope }}"
   group: webservers
+----
+
