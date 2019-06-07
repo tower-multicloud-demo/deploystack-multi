@@ -7,9 +7,10 @@
     - name: Including {{ cloud }} role for infrastructure creation
       include_role:
         name: role-ec2
-      when: cloud == "aws"
+      when: cloud == "AWS"
 
+    - name: Including {{ cloud }} role for infrastructure creation
       include_role:
         name: role-ec2
-      when: cloud == "azure"
+      when: cloud == "Azure"
       
