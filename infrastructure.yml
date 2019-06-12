@@ -1,7 +1,7 @@
 ---
 - name: Create {{ cloud }} Infrastructure
   hosts: localhost
-  #connection: local
+  connection: local
   gather_facts: False
   tasks:
     - name: Including {{ cloud }} role for infrastructure creation
