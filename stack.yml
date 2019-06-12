@@ -16,7 +16,7 @@
     - debug:
         var: aws
     
-     - debug:
+    - debug:
         var: azure
       
 - import_playbook: infrastructure.yml
