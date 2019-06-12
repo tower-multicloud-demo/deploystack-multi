@@ -1,5 +1,7 @@
 - name: Provision a set of EC2 instances with tag_Name {{ ec2_scope }}
   ec2:
+     aws_access_key: '{{ lookup("env", "AWS_ACCESS_KEY_ID") }}'
+     aws_secret_key: '{{ lookup("env", "AWS_SECRET_ACCESS_KEY") }}'
      key_name: "{{ ec2_key_name }}"
      state: present
      region: "{{ ec2_region }}"
